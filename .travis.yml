@@ -1,0 +1,10 @@
+dist: trusty
+sudo: false
+
+language: node_js
+node_js:
+  - '9'
+
+script:
+  - 'npm install'
+  - 'npm run build:lib'
