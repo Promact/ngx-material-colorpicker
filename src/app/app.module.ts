@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 
-import { NgxMaterialColorpickerModule } from 'ngx-material-colorpicker';
+import { ColorpickerModule } from 'ngx-material-colorpicker';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,7 @@ import { NgxMaterialColorpickerModule } from 'ngx-material-colorpicker';
   ],
   imports: [
     BrowserModule,
-    NgxMaterialColorpickerModule,
+    ColorpickerModule,
     FormsModule,
     ReactiveFormsModule
   ],

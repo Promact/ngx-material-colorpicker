@@ -1,24 +1,70 @@
-# NgxMaterialColorpicker
+# ngx-material-colorpicker
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.
+Color picker component (based on angular material 7+)
 
-## Code scaffolding
+## Usage
 
-Run `ng generate component component-name --project ngx-material-colorpicker` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-material-colorpicker`.
-> Note: Don't forget to add `--project ngx-material-colorpicker` or else it will be added to the default project in your `angular.json` file. 
+```
+npm install --save @promact/ngx-material-colorpicker
+```
 
-## Build
+### Import
+```
+import { ColorpickerModule } from 'ngx-material-colorpicker';
 
-Run `ng build ngx-material-colorpicker` to build the project. The build artifacts will be stored in the `dist/` directory.
+// In your App's module:
+imports: [
+   ColorpickerModule
+]
+```
 
-## Publishing
+### Add in your HTML
 
-After building your library with `ng build ngx-material-colorpicker`, go to the dist folder `cd dist/ngx-material-colorpicker` and run `npm publish`.
+```
+<ngx-material-colorpicker [(ngModel)]="color"></ngx-material-colorpicker>
+```
 
-## Running unit tests
+## API
 
-Run `ng test ngx-material-colorpicker` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Properties
 
-## Further help
+| Name | Type | Description |
+| --- | --- | --- |
+| `disabled` | `boolean` | Whether or not the colorpicker is disabled |
+| `format` | `string` | 	Color format:'hex', 'rgb', 'hsl'.Default :hex |
+| `id` | `number` | The unique ID of this colorpicker. |
+| `tabindex` | `number` | The tabIndex of the colorpicker. |
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Events
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `change` | `Event` | Fired when color is changed |
+
+### Examples
+A colorpicker would have the following markup.
+```html
+<ngx-material-colorpicker [(ngModel)]="color"></ngx-material-colorpicker>
+```
+```html
+<ngx-material-colorpicker [(ngModel)]="color" format="hsla"></ngx-material-colorpicker>
+```
+```html
+<ngx-material-colorpicker [(ngModel)]="color" [disabled]="true"></ngx-material-colorpicker>
+```
+
+## Developing
+
+### Change code in projects/ngx-material-colorpicker/src folder
+
+### Build library
+
+```
+npm run build:lib
+```
+
+### Run demo
+
+```
+ng serve
+```
