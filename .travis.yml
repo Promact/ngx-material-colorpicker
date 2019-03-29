@@ -1,10 +1,16 @@
 dist: trusty
 sudo: false
-
 language: node_js
 node_js:
-  - '8'
-
+- '8'
 script:
-  - 'npm install'
-  - 'npm run build:lib'
+- npm install
+- npm run build:lib
+deploy:
+  provider: npm
+  email: rushi@promactinfo.com
+  api_key:
+    secure: pwxD4KA3l3s8DrsK5E0TLx4PZoUN3IPllgtmyM92GbCtWpKGm+G1u2XOS7bVY0w91WmkjF+2g7ivEC+ih2FqnwU3OfDKdtW+4JWheZ3r1HA5Gj/fOpckFvT/t6gVIc3nGlhgR0yHOm3LE6CPysSZOBdXbyIzTvEA6FYrl2/7f4uFsH79/FvCeOy3/NyWbo4dwOYddfVKNag/PaBelfppE1FUZkvFwi/uh7bJ2oeg1joQs78z0JnbjTiGmtFtBegk/uiPIvDaXTD425ADiNUM72r9c32HECJGLAglcbsSZP9QnZsQwh+BSpvhcwKcGLQmGRtwSuFQ57qPrVejPyB8s7OOs1J1nCHVco03P/uqgVQ++1EsiS+nFJJt+4c4gS238oFHNcQNsl+w973sAiMp4INxAQ0x/YBLgFpPGjxqZb1N6n61J5Nxg61117wwFHF2LDQ1aQV6KhNZbMOi4Gow7LpDwo4mH6IoOP1QKRMl05K3x2gdnCmV7s/KGdE8ZJZikhT97PHVC8ER8ApmgnecV/nhDGDnZVRUTd8Jta1c7eS7RS4TGlpAq2mI3u07B+6i2MhXjXMyMWnAI4GEm3WhzEMbjYi93zQ+s8KEKt2unvrHWrs6qdruq42opfhZDn+C6MAJw1HEgjAtaOPNbBaCqsL3zbeLyXrZfa08/yKg2lE=
+  on:
+    tags: true
+    repo: Promact/ngx-material-colorpicker
