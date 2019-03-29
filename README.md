@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Promact/ngx-material-colorpicker.svg?branch=master)](https://travis-ci.org/Promact/ngx-material-colorpicker)
+
 # ngx-material-colorpicker
 
 Color picker component (based on angular material 7+)
