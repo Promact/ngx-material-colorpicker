@@ -4,12 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { PortalModule } from '@angular/cdk/portal';
 import { A11yModule } from '@angular/cdk/a11y';
-import { NgxMaterialColorpickerComponent, ColorpickerSliderDirective, TextDirective } from './ngx-material-colorpicker.component';
+import { ColorpickerComponent, ColorpickerSliderDirective, TextDirective } from './ngx-material-colorpicker.component';
 import { ColorUtil } from './color-util';
 
 @NgModule({
   declarations: [
-    NgxMaterialColorpickerComponent,
+    ColorpickerComponent,
     ColorpickerSliderDirective,
     TextDirective
   ],
@@ -21,7 +21,7 @@ import { ColorUtil } from './color-util';
     A11yModule
   ],
   exports: [
-    NgxMaterialColorpickerComponent,
+    ColorpickerComponent,
     ColorpickerSliderDirective,
     TextDirective
   ],
@@ -29,4 +29,4 @@ import { ColorUtil } from './color-util';
     ColorUtil
   ]
 })
-export class NgxMaterialColorpickerModule { }
+export class ColorpickerModule { }

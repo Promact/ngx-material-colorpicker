@@ -163,7 +163,7 @@ export class ColorpickerSliderDirective {
  * Change event object emitted by Md2Colorpicker.
  */
 export class Md2ColorChange {
-  constructor(public source: NgxMaterialColorpickerComponent, public color: string) { }
+  constructor(public source: ColorpickerComponent, public color: string) { }
 }
 
 @Component({
@@ -179,7 +179,7 @@ export class Md2ColorChange {
   },
   encapsulation: ViewEncapsulation.None
 })
-export class NgxMaterialColorpickerComponent implements OnDestroy, ControlValueAccessor {
+export class ColorpickerComponent implements OnDestroy, ControlValueAccessor {
 
   private _portal: TemplatePortal;
   private _overlayRef: OverlayRef;
